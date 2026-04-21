@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Js Questions</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // Q1:  Write functions that:
+        //       Takes an array of numbers
+        //       Returns only even/odd numbers
+        //       Then double each of them
+        
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // Answer 1
+        function even(arr) {
+            return arr.filter(num => num % 2 === 0).map(num => num * 2)
+        }
+        console.log(even(array))
+
+
+        // Answer 2
+        function odd(arr) {
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 !== 0) {
+                    result.push(arr[i] * 2)
+                }
+            }
+            return result
+        }
+
+        console.log(odd(array))
+
+
+
+    </script>
+</body>
+
+</html>
