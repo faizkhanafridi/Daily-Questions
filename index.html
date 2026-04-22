@@ -17,27 +17,27 @@
         //       Returns only even/odd numbers
         //       Then double each of them
 
-        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-        // Answer:
-        function even(arr) {
-            return arr.filter(num => num % 2 === 0).map(num => num * 2)
-        }
-        console.log(even(array))
+        // // Answer:
+        // function even(arr) {
+        //     return arr.filter(num => num % 2 === 0).map(num => num * 2)
+        // }
+        // console.log(even(array))
 
 
-        // Answer:
-        function odd(arr) {
-            let result = [];
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] % 2 !== 0) {
-                    result.push(arr[i] * 2)
-                }
-            }
-            return result
-        }
+        // // Answer:
+        // function odd(arr) {
+        //     let result = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] % 2 !== 0) {
+        //             result.push(arr[i] * 2)
+        //         }
+        //     }
+        //     return result
+        // }
 
-        console.log(odd(array))
+        // console.log(odd(array))
 
 
 
@@ -50,7 +50,7 @@
         // Task:  Write a query to get top 2 highest salaries
 
         // Answer:
-        console.log("SELECT salary FROM Employees ORDER BY salary DESC LIMIT 2")
+        // console.log("SELECT salary FROM Employees ORDER BY salary DESC LIMIT 2")
 
 
 
@@ -74,29 +74,45 @@
 
 
         // Answer
-        function check(a){
-            let re =  a.split("").reverse().join("")
+        // function check(a){
+        //     let re =  a.split("").reverse().join("")
 
-            if(a === re ){
-                console.log("Correct")
-            }
-            else{
-                console.log("This is not Palindrome")
-            }
+        //     if(a === re ){
+        //         console.log("Correct")
+        //     }
+        //     else{
+        //         console.log("This is not Palindrome")
+        //     }
 
+        // }
+
+        // check("mustajab")
+
+
+        // // More Clean way 
+        // function check2(a){
+        //     let convert = a.toLowerCase().replace(/\s/g, "") // remove spaces and lower case words
+        //     let check = convert.split("").reverse().join("")
+        //     return convert === check
+        // }
+
+        // console.log(check2("dad"))
+
+
+
+
+        // JS
+        // Q5: Find the largest number in an array without using Math.max:======================================================================
+
+        let array = [3, 7, 2, 9, 5]
+
+        function find(arr){
+            let result = arr.sort((a,b) => b - a) // if negative then b should place before a
+            // if positive then b should place after a 
+            console.log(result)
         }
 
-        check("mustajab")
-
-
-        // More Clean way 
-        function check2(a){
-            let convert = a.toLowerCase().replace(/\s/g, "") // remove spaces and lower case words
-            let check = convert.split("").reverse().join("")
-            return convert === check
-        }
-
-        console.log(check2("dad"))
+        find(array)
 
 
     </script>
