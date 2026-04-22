@@ -11,22 +11,22 @@
 
     <script>
 
-
-        // Q1:  Write functions that:
+        // JS
+        // Q1:  Write functions that:======================================================================
         //       Takes an array of numbers
         //       Returns only even/odd numbers
         //       Then double each of them
-        
+
         let array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-        // Answer 1
+        // Answer:
         function even(arr) {
             return arr.filter(num => num % 2 === 0).map(num => num * 2)
         }
         console.log(even(array))
 
 
-        // Answer 2
+        // Answer:
         function odd(arr) {
             let result = [];
             for (let i = 0; i < arr.length; i++) {
@@ -39,6 +39,64 @@
 
         console.log(odd(array))
 
+
+
+
+        // MYSQL
+        // Q2:You have a table:======================================================================
+        // Employees
+        // | id | name | salary |
+
+        // Task:  Write a query to get top 2 highest salaries
+
+        // Answer:
+        console.log("SELECT salary FROM Employees ORDER BY salary DESC LIMIT 2")
+
+
+
+
+        // React
+        // Q3: Create a simple counter component:======================================================================
+        // Initial value = 0
+        // Button to increase count
+        // Button to decrease count
+
+        // const [count, setCount] = useState(0)
+
+        // <button onclick="{()=> setCount(count +1)}" id="plus">+</button>
+        // <button onclick="{()=> setCount(count - 1)}" id="minus">-</button>
+
+
+
+
+        // JS
+        // Q4: Write a function to check if a string is a palindrome:======================================================================
+
+
+        // Answer
+        function check(a){
+            let re =  a.split("").reverse().join("")
+
+            if(a === re ){
+                console.log("Correct")
+            }
+            else{
+                console.log("This is not Palindrome")
+            }
+
+        }
+
+        check("mustajab")
+
+
+        // More Clean way 
+        function check2(a){
+            let convert = a.toLowerCase().replace(/\s/g, "") // remove spaces and lower case words
+            let check = convert.split("").reverse().join("")
+            return convert === check
+        }
+
+        console.log(check2("madam"))
 
 
     </script>
